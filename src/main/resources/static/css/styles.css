@@ -1,0 +1,43 @@
+/* Custom CSS styles */
+
+.sidebar {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Ensure the sidebar is on top of the main content */
+}
+
+.main-content {
+    padding-top: 20px;
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling for the main content */
+}
+
+/* Style for the active link in the sidebar */
+.nav-item .active {
+    font-weight: bold;
+}
+
+/* Set the PDF viewer iframe to 100% width and height */
+#pdfViewer {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 767px) {
+    .sidebar {
+        min-height: auto;
+        position: relative; /* Reset position for the sidebar on small screens */
+    }
+
+    .collapse.show {
+        display: block; /* Ensure the sidebar is visible when toggled on small screens */
+    }
+
+    .main-content {
+        height: calc(100vh - 56px); /* Subtract the height of the collapsed navbar */
+        padding-bottom: 20px;
+    }
+}
